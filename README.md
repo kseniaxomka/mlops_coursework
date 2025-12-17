@@ -70,12 +70,9 @@ MLOPS/
 ### Клонирование и настройка
 
 ```bash
-# Клонировать репозиторий
-git clone <repository-url>
-cd MLOPS_Ksusha
-
-# Создать виртуальное окружение
-python -m venv clean_mlops
+cd ~
+cd Desktop
+cd MLOPS_course_work_Ksusha_edition/
 
 # Активировать (Windows Git Bash)
 source clean_mlops/Scripts/activate
