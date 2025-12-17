@@ -1,0 +1,275 @@
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =====================================================
+# 🌐 Virtual Environments
+# =====================================================
+
+venv/
+env/
+ENV/
+.venv/
+.env/
+clean_mlops/
+mlops_env/
+*/bin/
+*/lib/
+*/include/
+*/Scripts/
+pyvenv.cfg
+
+# =====================================================
+# 📓 Jupyter Notebook
+# =====================================================
+
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Jupyter Notebook temporary files
+*.nbconvert.py
+.jupyter/
+
+# =====================================================
+# 🧠 ML/DL Models & Data
+# =====================================================
+
+# Trained models (большие файлы)
+*.h5
+*.hdf5
+*.keras
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.pt
+*.pth
+*.onnx
+saved_model/
+checkpoints/
+
+# Datasets (большие файлы)
+*.csv
+*.tsv
+*.parquet
+*.feather
+data/
+datasets/
+raw_data/
+
+
+# =====================================================
+# 📊 MLflow
+# =====================================================
+
+mlruns/
+mlartifacts/
+mlflow.db
+*.sqlite
+
+# =====================================================
+# 🔧 IDE & Editors
+# =====================================================
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# =====================================================
+# 💻 OS Generated Files
+# =====================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =====================================================
+# 📦 Dependencies & Caches
+# =====================================================
+
+# pip
+pip-wheel-metadata/
+.pip/
+
+# Poetry
+poetry.lock
+
+# Conda
+*.conda
+conda-meta/
+
+# Cache
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# =====================================================
+# 🔐 Secrets & Environment Variables
+# =====================================================
+
+.env
+.env.*
+*.env
+.envrc
+secrets.yaml
+secrets.yml
+secrets.json
+config/secrets/
+*.pem
+*.key
+credentials.json
+
+# =====================================================
+# 📝 Logs & Temporary Files
+# =====================================================
+
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+tmp/
+temp/
+
+# =====================================================
+# 🐳 Docker
+# =====================================================
+
+# Docker volumes
+docker-volumes/
+
+# =====================================================
+# 📊 Output Files
+# =====================================================
+
+output/
+outputs/
+results/
+reports/
+
+
+# =====================================================
+# 🧪 Testing
+# =====================================================
+
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+htmlcov/
+.hypothesis/
+
+# =====================================================
+# 📚 Documentation builds
+# =====================================================
+
+docs/_build/
+site/
+public/
+
+# =====================================================
+# ⚡ Streamlit
+# =====================================================
+
+.streamlit/secrets.toml
+
+# =====================================================
+# 🎯 Project Specific
+# =====================================================
+
+# Временные файлы экспериментов
+experiments/
+runs/
+artifacts/
+
+# Большие файлы
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z

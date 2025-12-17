@@ -1,0 +1,45 @@
+# config/transformer_experiment.yml
+mlflow:
+  tracking_uri: "http://127.0.0.1:8080"
+  experiment_id: "0"
+  run_name: "transformer_v1"
+  tags:
+    mlflow.runName: "Transformer_Experiment"
+    model_type: "DistilBERT"
+
+data:
+  source_run: "Second_dataset_experiment"
+  artifact_path: "data/Dataset_2.csv"
+  text_column: "span"
+  label_column: "label"
+  balance_classes: false
+  
+  # Добавь это:
+  split:
+    test_size: 0.3
+    val_size: 0.5
+    random_state: 42
+
+model:
+  name: "microsoft/xtremedistil-l6-h256-uncased"
+  tokenizer:
+    truncation: true
+    max_length: 128
+    padding: "max_length"
+  class_names:
+    0: "neutral"
+    1: "joy"
+    2: "sadness"
+    3: "anger"
+    4: "fear"
+    5: "surprise"
+
+training:
+  output_dir: "./transformer_results"
+  num_train_epochs: 1
+  per_device_train_batch_size: 16
+  per_device_eval_batch_size: 32
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  eval_strategy: "epoch"
+  save_strategy: "epoch"

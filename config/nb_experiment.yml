@@ -1,0 +1,28 @@
+# config/naive_bayes_simple.yml
+mlflow:
+  tracking_uri: "http://127.0.0.1:8080"
+  experiment_id: "0"
+  run_name: "nb_model_v1"
+
+model:
+  version: "1.0"
+  model_file: "model.joblib"
+  vectorizer_file: "vectorizer.joblib"
+  encoder_file: "encoder.joblib"
+
+data:
+  source_run: "Second_dataset_experiment"
+  artifact_path: "Обработанные_данные/Датасет_курсовая_препроцессирован.csv"  # ПРАВИЛЬНЫЙ ПУТЬ!
+  
+  text_column_name: "span"
+  label_column_name: "label"
+
+vectorizer:
+  max_features: 5000
+  ngram_range: [1, 4]
+  min_df: 2
+  max_df: 0.9
+
+training:
+  test_size: 0.2
+  random_state: 42

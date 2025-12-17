@@ -1,0 +1,84 @@
+# config/second_dataset_experiment.yml
+experiment:
+  name: "Second_dataset_experiment"
+  version: "2.0"
+
+mlflow:
+  tracking_uri: "http://127.0.0.1:8080"
+  experiment_name: 0
+  run_name: "Second_dataset_experiment"
+  tags:
+    mlflow.runName: "Second_dataset_experiment"
+    version: "2.0"
+
+data:
+  input:
+    path: "Датасет_курсовая.csv"
+    delimiter: ";"
+    encoding: "utf-8"
+    columns:
+      text: "text"
+      label: "label"
+  
+  output:
+    path: "Dataset_2.csv"
+    save_processed: true
+    include_original: true
+
+preprocessing:
+  text_column: "text"
+  new_column: "processed_text"
+  
+  lowercase: true
+  remove_punctuation: true
+  remove_numbers: true
+  remove_extra_spaces: true
+  
+  tokenization: true
+  remove_short_words: true
+  min_word_length: 2
+  
+  remove_stopwords: true
+  lemmatize: true
+  
+  stopwords:
+    language: "english"
+    important_words:
+      - "not"
+      - "no"
+      - "never"
+      - "none"
+      - "nothing"
+      - "nobody"
+      - "nowhere"
+      - "neither"
+      - "nor"
+      - "cannot"
+      - "can't"
+      - "don't"
+      - "won't"
+      - "isn't"
+      - "aren't"
+      - "wasn't"
+      - "weren't"
+      - "haven't"
+      - "hasn't"
+      - "hadn't"
+      - "wouldn't"
+      - "shouldn't"
+      - "couldn't"
+      - "mustn't"
+      - "very"
+      - "too"
+      - "so"
+      - "really"
+      - "quite"
+      - "extremely"
+  
+  lemmatizer:
+    cache_size: 300000
+    pos_tags: ['v', 'n', 'a', 'r']
+
+debug:
+  show_samples: 3
+  sample_preview_length: 100

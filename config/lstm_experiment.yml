@@ -1,0 +1,47 @@
+# config/lstm_experiment.yml
+experiment:
+  name: "LSTM_Text_Classification"
+  version: "1.0"
+
+mlflow:
+  tracking_uri: "http://127.0.0.1:8080"
+  experiment_id: "0"
+  run_name: "LSTM_Simple_v1.0"
+  tags:
+    mlflow.runName: "LSTM_Text_Classification"
+    version: "1.0"
+    model_type: "LSTM"
+
+data:
+  source_run: "Second_dataset_experiment"
+  artifact_path: "data/Dataset_2.csv"
+  text_column: "span"
+  label_column: "label"
+  balance_classes: false
+  
+  # Добавь это:
+  split:
+    test_size: 0.3
+    val_size: 0.5
+    random_state: 42
+
+model:
+  embedding_dim: 100
+  lstm_units: 128
+  dense_units: 64
+  dropout_rate: 0.5
+  recurrent_dropout: 0.2
+  
+  optimizer: "adam"
+  loss: "sparse_categorical_crossentropy"
+  metrics: ["accuracy"]
+
+training:
+  output_dir: "./transformer_results"
+  num_train_epochs: 1
+  per_device_train_batch_size: 16
+  per_device_eval_batch_size: 32
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  eval_strategy: "epoch"
+  save_strategy: "epoch"

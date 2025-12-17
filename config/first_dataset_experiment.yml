@@ -1,0 +1,26 @@
+# config/first_dataset_experiment.yml
+experiment:
+  name: "First_dataset_experiment"
+  version: "1.0"
+
+mlflow:
+  tracking_uri: "http://127.0.0.1:8080"
+  experiment_name: 0
+  run_name: "First_dataset_experiment"
+  tags:
+    mlflow.runName: "First_dataset_experiment"
+    version: "1.0"
+
+data:
+  input:
+    path: "Датасет_курсовая.csv"
+    delimiter: ";"
+    encoding: "utf-8"
+    columns:
+      text: "text"
+      label: "label"
+  
+  output:
+    path: "Dataset_1.csv"
+    save_processed: true
+    include_original: true
